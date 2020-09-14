@@ -1,9 +1,11 @@
+# Franco Chiesa Docampo
+
 library(gplots)
 library(ggplot2)
 library(mRMRe)
 library(LiblineaR)
 
-load("/Users/marcelochiesa/Desktop/EXAMS\ LLN/LGBIO2010/Glioblastoma.Rdata")
+load("/Users/Franco/Desktop/EXAMS\ LLN/LGBIO2010/Glioblastoma.Rdata")
 
 #-----------------------------POINT-2-----------------------------#
 
