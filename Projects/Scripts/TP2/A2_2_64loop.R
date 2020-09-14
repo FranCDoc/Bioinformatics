@@ -1,10 +1,12 @@
+# Franco Chiesa Docampo
+
 library(ape);library(Biostrings);library(seqinr);library(ape)
 
-mat1 <- read.fasta("/Users/marcelochiesa/Desktop/Bioinformatics/Assignment2/AEB0.fasta",seqtype = "AA")
+mat1 <- read.fasta("/Users/Franco/Desktop/Bioinformatics/Assignment2/AEB0.fasta",seqtype = "AA")
 s1 <- getSequence(mat1[[1]]);s1 <- toupper(paste(s1,collapse = ""))
 n1 <- length(getSequence(mat1[[1]]))
 
-mat2 <- read.fasta("/Users/marcelochiesa/Desktop/Bioinformatics/Assignment2/receptors.fasta",seqtype = "AA")
+mat2 <- read.fasta("/Users/Franco/Desktop/Bioinformatics/Assignment2/receptors.fasta",seqtype = "AA")
 
 nchar_pwa <- rep(0,64)
 score_pwa <- rep(0,64)
@@ -19,7 +21,7 @@ for (j in 1:64){
   s2 <- getSequence(mat2[[j]]);s2 <- toupper(paste(s2,collapse = ""))
   n2 <- length(getSequence(mat2[[j]]))
   
-  PAM300 <- read.table("/Users/marcelochiesa/Desktop/Bioinformatics/Assignment2/PAM300");PAM300 <- as.matrix(PAM300)
+  PAM300 <- read.table("/Users/Franco/Desktop/Bioinformatics/Assignment2/PAM300");PAM300 <- as.matrix(PAM300)
   colnames(PAM300)[colnames(PAM300) == "X."] <- "*"
   # pattern (s2) => FAMILY sequences; subject (s1) => AEB0 sequence
   l <-pairwiseAlignment(s2,s1,substitutionMatrix = PAM300, gapOpening = 11, gapExtension = 1, type = "local-global", scoreOnly = FALSE) # the lower the gapOpening the more "permission" has the algorithm to move between columns and rows in order to search for the max score. Naturally there will be more matches.
