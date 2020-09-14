@@ -1,3 +1,5 @@
+# Franco Chiesa Docampo
+
 library(ape)
 library(seqinr)
 #reading the sequence 
