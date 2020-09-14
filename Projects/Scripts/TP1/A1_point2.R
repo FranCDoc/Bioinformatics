@@ -1,4 +1,7 @@
+# Franco Chiesa Docampo
+
 #reading the sequence
+
 library(ape)
 list <- read.GenBank("NC_002662", as.character = TRUE)
 seq <- list[[1]]
